@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Install libraries
+      - name: Install flake8
         run: pip install flake8
 
       - name: Lint with flake8
@@ -36,7 +36,7 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Install libraries
+      - name: Install dependencies
         run: |
           cd function
           python -m pip install --upgrade pip
@@ -47,7 +47,7 @@ jobs:
           cd function
           zip -r ../${{ github.sha }}.zip .
 
-      - name: Archive artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: zipped-bundle
