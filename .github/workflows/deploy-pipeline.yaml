@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
 
 
       - name: Set up Python
